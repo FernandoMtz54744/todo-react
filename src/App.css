@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    height: 100vh;
+    /* background: linear-gradient(180deg, rgba(26,71,208,1) 0%, rgba(142,71,226,1) 100%); */
+     /* background-color: #212121; */
+     background-color: #311b92;
+    color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Todo[completado="true"]{
+    text-decoration: line-through;
+    background-color: #212121;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+    padding: 1rem;
+    border: 2px solid whitesmoke;
+    margin: 2rem;
+    text-align: center;
+    width: 60vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.datos{
+    display: flex;
+    flex-direction: row;
+}
+
+.datos > button{
+    margin-left: auto;
+}
+
+button{
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 0.5rem;
+    margin: 0.5rem;    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+h1{
+    margin-bottom: 1.5rem;
+}
+
+input{
+    background-color: transparent;
+    font-size: 1rem;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 70%;
+}
+
+input::placeholder{
+    color: whitesmoke;
+    opacity: 0.5;
+}
+
+input:focus{
+    outline: none;
+}
+
+.Todo{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    font-size: 1rem;
+    border: 1px solid whitesmoke;
+    align-items: center;
+    padding-left: 1rem; 
+}
+
+.actions{
+    margin-left: auto;
+}
+
+select{
+    background-color: transparent;
+}
+
+select *{
+    background-color: transparent;
+}
+
+.buttonVerde{
+    background-color: #43a047;
+}
+
+.buttonNaranja{
+    background-color: #ff3d00;
+}
+
+.buttonRojo{
+    background-color: #bb002f;
+}
+
+.botonesFiltro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.activo{
+    background-color: #0026ca;
 }
